@@ -1,0 +1,24 @@
+package com.example.demo.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/home")
+public class ControllerBasic {
+	
+	public List<Post> getPosts(){
+		ArrayList<Post> post = new ArrayList<>();
+		
+		post.add(new Post(1, "La principal característica de las Phalaenopsis son sus flores en forma de mariposa.", "http://localhost/img/post.jpg", new Date(), "Phalaenopsis"));
+		post.add(new Post(2, "La principal característica de las Phalaenopsis son sus flores en forma de mariposa.", "http://localhost/img/post.jpg", new Date(), "Phalaenopsis"));
+		
+		return post;
+	}
+	
+	@GetMapping(path =  {"/post", "/"})
+ 	public String saludar() {
+		return "index";
+	}
+}

@@ -1,0 +1,21 @@
+package com.example.demo.service.implementation;
+
+import java.util.List;
+
+import com.example.demo.service.Post;
+import com.example.demo.service.PostService;
+
+@Service
+public class PostServiceImpl implements PostService{
+
+	@Override
+	public List<Post> validationId(List<Post> posts) {
+		for(com.example.demo.model.Post post > posts) {
+			if(post.getTitulo() == null) {
+				throw new NullPointerException("El titulo esta nulo");
+			}
+		}
+		return posts;
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.example.demo.beans;
+
+import org.springframework.context.annotation.Bean;
+import com.example.demo.model.Conexion;
+
+public class CreandoConexion {
+	@Bean
+	public Conexion getConexion() {
+		com.example.demo.model.Conexion conexion = new Conexion();
+		conexion.setDb("mysql");
+		conexion.setUrl("localhost");
+		return conexion;
+	}
+	
+}

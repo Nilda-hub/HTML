@@ -1,0 +1,9 @@
+package com.example.demo.beans;
+
+import org.springframework.context.annotation.Bean;
+
+public class CreandoConexion {
+	@Bean
+	public Conexion get
+	
+}
